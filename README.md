@@ -33,7 +33,7 @@ The following are the descriptions of each table:
 
 ### Technical Highlights
 
-The project consists of the following components:
+The project consists of but is not limited to the following components:
 
 - **Stored Procedures**: There are 5 stored procedures in the database. The stored procedures are as follows:
   - `GetPatientHistory`: Fetches the entire medical history of a given patient using common table expressions (CTEs) and joins.
@@ -42,10 +42,10 @@ The project consists of the following components:
   - `sp_GetClinicIncomeAnalytics`: Provides monthly income analytics for the clinic using CTEs.
   - `sp_DisplayDocApptSchedule`: Displays the complete appointment schedule for a specific doctor on a particular date, leveraging cursors for this.
 - **Common Table Expressions (CTEs)**: CTEs are used in the `GetPatientHistory` and `sp_GetClinicIncomeAnalytics` stored procedures. It is also used in the query tracking the sequence of prescriptions.
-- **Triggers**:
+- **Triggers**: There are 2 triggers in the database. The triggers are as follows:
   - `trg_update_modified_time`: An "AFTER" trigger that updates the last_modified_on field in the Appointments table whenever an insert or update operation occurs.
   - `trg_check_appointment_logic`: An "INSTEAD OF" trigger that checks the appointment logic to ensure its validity before insertion.
-- **Functions**:
+- **Functions**: Built-in functions (string, numeric, datetime, ranking, offset, aggregate, etc.) are used throughout the project. In addition, there are 3 user-defined functions (UDFs) in the database. The UDFs are as follows:
   - `fn_GetAge`: A scalar-valued function (SVF) to calculate the age of a patient based on their date of birth.
   - `fn_getPatientNonPaidBills`: A table-valued function (TVF) to return non-settled bills for a specific patient.
   - `GetPatientsWithoutAppointments`: A TVF that fetches patients who haven't scheduled an appointment within the last given number of days.
