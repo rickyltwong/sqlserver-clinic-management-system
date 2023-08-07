@@ -10,7 +10,7 @@ There are 13 tables in the database and they can be divided into 5 modules:
 
 1. **Patient Module**: `Patients`, `Insurance`, `PatientAllergies`
 2. **Staff Module**: `Employees`, `StaffSchedule`
-3. **Appointment Module**: `Appointments`
+3. **Appointment Module**: `Appointments`, `AppointmentStatus`
 4. **Medical Records Module**: `MedicalRecords`, `Prescriptions`, `RequestForm`
 5. **Billing Module**: `Bills`, `BillItems`, `Payment`
 
